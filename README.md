@@ -7,7 +7,7 @@ This guide helps you set up and run the **RL-Swarm** project along with the **Ge
 ## 1. Clone the Gensyn Repository
 
 ```bash
-git clone https://github.com/krrpatel/gensyn.git && python3 main.py && cd && rm -rf gensyn
+git clone https://github.com/krrpatel/gensyn.git && cd gensyn && python3 main.py && cd && rm -rf gensyn
 ```
 
 This CMD will automatically update the rl-swarm into Non Error Version By Saving Swarm.pem automatic ❤️
