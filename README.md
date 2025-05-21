@@ -86,3 +86,9 @@ cloudflared --version
 ```
 cloudflared tunnel --url http://localhost:3000
 ```
+
+* After Login
+
+```
+sudo ufw disable
+```
