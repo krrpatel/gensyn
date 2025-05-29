@@ -44,10 +44,13 @@ sed_cmd_yaml = (
 print("Running sed command to edit YAML config...")
 subprocess.run(sed_cmd_yaml, shell=True)
 
-# Step 7: Run sed command to patch Python DHT call
+# Step 7: Run corrected sed command for Python file
 grpo_runner_path = os.path.join(rl_swarm_dir, "hivemind_exp", "runner", "grpo_runner.py")
 sed_cmd_py = (
-    f"sed -z -i.bak 's/\\(hivemind\\.DHT([^)]*\\))/\\1, ensure_bootstrap_success=False)/' {grpo_runner_path}"
+    f"sed -i 's/"
+    f"\\(hivemind\\.DHT([^)]*\\), \\*\\*self\\._dht_kwargs(grpo_args)\\)/"
+    f"\\1, ensure_bootstrap_success=False, **self._dht_kwargs(grpo_args)/'"
+    f" {grpo_runner_path}"
 )
 print("Patching grpo_runner.py to add ensure_bootstrap_success=False...")
 subprocess.run(sed_cmd_py, shell=True)
