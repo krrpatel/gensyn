@@ -23,7 +23,7 @@ if os.path.exists(rl_swarm_dir):
 
 # Step 4: Clone the GitHub repo
 print("Cloning rl-swarm repository...")
-subprocess.run(["git", "clone", "https://github.com/krrpatel/rl-swarm.git"], cwd=home)
+subprocess.run(["git", "clone", "https://github.com/gensyn/rl-swarm.git"], cwd=home)
 
 # Step 5: Move swarm.pem back into rl-swarm if it exists in $HOME
 if os.path.isfile(home_swarm_pem):
