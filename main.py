@@ -30,4 +30,18 @@ if os.path.isfile(home_swarm_pem):
     print("Moving swarm.pem back into rl-swarm...")
     shutil.move(home_swarm_pem, os.path.join(rl_swarm_dir, "swarm.pem"))
 
+# Step 6: Run sed command to edit YAML
+yaml_file = os.path.join(rl_swarm_dir, "hivemind_exp", "configs", "mac", "grpo-qwen-2.5-0.5b-deepseek-r1.yaml")
+sed_cmd = (
+    f"sed -i '"
+    f"s/^torch_dtype: .*/torch_dtype: float32/; "
+    f"s/^bf16: .*/bf16: false/; "
+    f"s/^tf32: .*/tf32: false/; "
+    f"s/^per_device_train_batch_size: .*/per_device_train_batch_size: 1/; "
+    f"s/^gradient_checkpointing: .*/gradient_checkpointing: false/"
+    f"' {yaml_file}"
+)
+print("Running sed command to edit YAML config...")
+subprocess.run(sed_cmd, shell=True)
+
 print("Done.")
