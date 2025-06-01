@@ -116,6 +116,8 @@ source .venv/bin/activate
 ```bash
 ./run_rl_swarm.sh
 ```
+Press The A Or B as Per Your Hardware
+
 ![image](https://github.com/user-attachments/assets/e31345ce-c66c-45b1-a861-e3cc96308544)
 
 
