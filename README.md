@@ -116,6 +116,37 @@ source .venv/bin/activate
 ```bash
 ./run_rl_swarm.sh
 ```
+![image](https://github.com/user-attachments/assets/e31345ce-c66c-45b1-a861-e3cc96308544)
+
+
+![image](https://github.com/user-attachments/assets/c700e3ce-64b6-4bfb-86c4-fd2f2050c88d)
+
+
+
+Here we go🚀
+
+Its Done ✅
+
+It will Generate Logs Soon🙌
+
+
+* Detach from `screen session` **(vps)**
+
+Use `Ctrl + A` and then press `D`
+
+* Attach to gensyn Screen to see Logs
+
+```
+screen -r gensyn
+```
+
+
+
+<div align="center">
+
+#  🛠 FAQ & Troubleshoot 🛠
+
+</div>
 
 ## ERROR : hivemind 15 sec error
 
