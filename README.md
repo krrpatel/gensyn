@@ -3,6 +3,25 @@
 This guide helps you set up and run the **RL-Swarm** project along with the **Gensyn** node.
 
 ---
+Your hardware requirements will vary depending on which swarm and model you choose. Users with less powerful hardware should select a smaller model (e.g. Qwen 0.5B or 1.5B) and smaller dataset (GSM8K) `A`. Users with more powerful hardware can select a larger model (e.g. Qwen 7B, 32B or 72B) and larger dataset (DAPO-Math 17K) `B`. The requirements for each are listed below:
+
+### Small model (0.5B or 1.5B) + Math (GSM8K dataset)
+* `CPU-only`: arm64 or x86 CPU with minimum 16gb ram (note that if you run other applications during training it might crash training).
+
+OR
+
+* `GPU`: 
+  * RTX 3090
+  * RTX 4090
+  * A100
+  * H100
+  * `≥24GB vRAM` GPU is recommended, but Gensyn now supports `<24GB vRAM` GPUs too.
+  * `≥12.4` CUDA Driver
+
+### Big model (7B, 32B or 72B) + Math Hard (DAPO-Math 17K dataset)
+* `GPU`: A100 (80GB) or H100 (80GB)
+
+
 
 ## 1. Clone the Gensyn Repository
 
