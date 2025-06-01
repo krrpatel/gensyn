@@ -92,6 +92,8 @@ yarn -v
 
 ## Start The Node
 
+</div>
+
 ## 1. Clone the Gensyn Repository
 
 ```bash
