@@ -105,6 +105,10 @@ This CMD will automatically update the rl-swarm into Non Error Version By Saving
 ## 2. Go To Rl-Swarm
 
 ```bash
+screen -S gensyn
+```
+
+```bash
 cd rl-swarm
 ```
 ## 3. Enable Virtual Environment
