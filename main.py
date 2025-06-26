@@ -31,7 +31,7 @@ if os.path.isfile(home_swarm_pem):
     shutil.move(home_swarm_pem, os.path.join(rl_swarm_dir, "swarm.pem"))
 
 # Step 6: Run sed command to edit YAML config
-yaml_file = os.path.join(rl_swarm_dir, "hivemind_exp", "configs", "mac", "grpo-qwen-2.5-0.5b-deepseek-r1.yaml")
+#yaml_file = os.path.join(rl_swarm_dir, "hivemind_exp", "configs", "mac", "grpo-qwen-2.5-0.5b-deepseek-r1.yaml")
 sed_yaml_cmd = (
     f"sed -i '"
     f"s/^torch_dtype: .*/torch_dtype: float32/; "
