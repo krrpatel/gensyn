@@ -41,17 +41,17 @@ sed_yaml_cmd = (
     f"s/^gradient_checkpointing: .*/gradient_checkpointing: false/"
     f"' {yaml_file}"
 )
-print("Running sed command to edit YAML config...")
-subprocess.run(sed_yaml_cmd, shell=True)
+##print("Running sed command to edit YAML config...")
+##subprocess.run(sed_yaml_cmd, shell=True)
 
 # Step 7: Insert ensure_bootstrap_success=False into grpo_runner.py
-runner_file = os.path.join(rl_swarm_dir, "hivemind_exp", "runner", "grpo_runner.py")
+##runner_file = os.path.join(rl_swarm_dir, "hivemind_exp", "runner", "grpo_runner.py")
 sed_runner_cmd = (
     "sed -i 's/\\*\\*self\\._dht_kwargs(grpo_args)/"
     "ensure_bootstrap_success=False, **self._dht_kwargs(grpo_args)/' "
     + runner_file
 )
-print("Running sed command to edit grpo_runner.py...")
-subprocess.run(sed_runner_cmd, shell=True)
+#print("Running sed command to edit grpo_runner.py...")
+#subprocess.run(sed_runner_cmd, shell=True)
 
 print("All tasks completed successfully.")
