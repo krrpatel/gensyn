@@ -172,6 +172,11 @@ sudo mkswap /swapfile
 sudo swapon /swapfile
 free -h
 ```
+
+```bash
+pip install --force-reinstall transformers==4.51.3 trl==0.19.1 && pip freeze && bash run_rl_swarm.sh
+```
+
 # 1️⃣ How to Login or access  http://localhost:3000/ in VPS? 📶
 
 * Open a new Terminal and login ur vps 
