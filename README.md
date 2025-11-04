@@ -177,6 +177,24 @@ free -h
 pip install --force-reinstall transformers==4.51.3 trl==0.19.1 && pip freeze && bash run_rl_swarm.sh
 ```
 
+## auto shutdown / kill error
+
+1. ctrl + c
+
+2.
+```bash
+rm -f /tmp/hivemind-p2pd-*.sock && export P2P_CONTROL_PATH="/tmp/hivemind-p2pd-new.sock"
+```
+3. close current gensyn screen and make new screen by
+```bash
+screen -S gensyn
+```
+
+4. run swarm
+```bash
+cd rl-swarm && . .venv/bin/activate && ./run_rl_swarm.sh
+```
+
 # 1️⃣ How to Login or access  http://localhost:3000/ in VPS? 📶
 
 * Open a new Terminal and login ur vps 
