@@ -192,7 +192,8 @@ screen -S gensyn
 
 4. run swarm
 ```bash
-cd rl-swarm && . .venv/bin/activate && ./run_rl_swarm.sh
+cd rl-swarm && python3 -m venv .venv
+source .venv/bin/activate && ./run_rl_swarm.sh
 ```
 
 # 1️⃣ How to Login or access  http://localhost:3000/ in VPS? 📶
