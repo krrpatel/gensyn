@@ -122,13 +122,8 @@ source .venv/bin/activate
 ```bash
 ./run_rl_swarm.sh
 ```
-Press The A Or B as Per Your Hardware
-
-![image](https://github.com/user-attachments/assets/e31345ce-c66c-45b1-a861-e3cc96308544)
-
-
-![image](https://github.com/user-attachments/assets/c700e3ce-64b6-4bfb-86c4-fd2f2050c88d)
-
+Press N if you dont want to upload model to huggingface
+then enter for default model traning
 
 
 Here we go🚀
