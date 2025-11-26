@@ -90,7 +90,7 @@ sudo apt install python3 python3-pip python3-venv python3-dev -y
 
 ```bash
 curl -LsSf https://astral.sh/uv/install.sh | sh
-export PATH="/root/.local/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
 ```
 
 Verify UV instalation
