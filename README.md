@@ -127,67 +127,11 @@ screen -r gensyn
 
 <div align="center">
 
-#  🛠 FAQ & Troubleshoot 🛠
-
-</div>
-
-## ERROR : hivemind 15 sec error
-
-Solution :-
-```bash
-cd $HOME/rl-swarm && sed -i -E 's/(startup_timeout: *float *= *)[0-9.]+/\1120/' $(python3 -c "import hivemind.p2p.p2p_daemon as m; print(m.__file__)")
-```
-
-## Kill Error
-
-```bash
-sudo fallocate -l 8G /swapfile
-sudo chmod 600 /swapfile
-sudo mkswap /swapfile
-sudo swapon /swapfile
-free -h
-```
-
-```bash
-pip install --force-reinstall transformers==4.51.3 trl==0.19.1 && pip freeze && bash run_rl_swarm.sh
-```
-
-## auto shutdown / kill error
-
-1. ctrl + c
-
-2.
-```bash
-rm -f /tmp/hivemind-p2pd-*.sock && export P2P_CONTROL_PATH="/tmp/hivemind-p2pd-new.sock"
-```
-3. close current gensyn screen and make new screen by
-```bash
-screen -S gensyn
-```
-
-4. run swarm
-```bash
-cd rl-swarm && python3 -m venv .venv
-source .venv/bin/activate && ./run_rl_swarm.sh
-```
 
 # 1️⃣ How to Login or access  http://localhost:3000/ in VPS? 📶
 
 * Open a new Terminal and login ur vps 
 
-* Allow Incoming connection on VPS
-
-```
-sudo apt install ufw -y
-sudo ufw allow 22
-sudo ufw allow 3000/tcp
-```
-
-* Enable ufw
-
-```
-sudo ufw enable
-```
 
 * Install cloudflared on the VPS
 
@@ -211,10 +155,4 @@ cloudflared --version
 
 ```
 cloudflared tunnel --url http://localhost:3000
-```
-
-* After Login
-
-```
-sudo ufw disable
 ```
