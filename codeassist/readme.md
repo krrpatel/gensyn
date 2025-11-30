@@ -2,8 +2,6 @@
 ## Hardware Requirements 
 - **RAM**: 12GB+  
 - **Disk**: 10GB+ SSD
-  
-> 💡 Tip: You can check [servarica.com](https://servarica.com) for affordable servers.
 
 ## 1. Prerequisites  
 
@@ -83,18 +81,12 @@ uv run run.py
 
 - i
 ```bash
-  sed -i '0,/11434/s//11435/' compose.yml
+sed -i '0,/11434/s//11435/' compose.yml
 sed -i -e 's/"11434\/tcp": 11434/"11434\/tcp": 11435/' -e 's#http://localhost:11434#http://localhost:11435#' run.py
 ```
 - ii
 ```bash
-cd web-ui/src/simulation/simulators
-```
-```bash
-sed -i 's#http://localhost:11434#http://localhost:11435#' OllamaCodeSimulator.ts
-```
-```bash
-cd && cd codeassist
+cd $HOME/codeassist/web-ui/src/simulation/simulators && sed -i 's#http://localhost:11434#http://localhost:11435#' OllamaCodeSimulator.ts && cd $HOME/codeassist
 ```
 ```bash
 uv run run.py --port 3001
