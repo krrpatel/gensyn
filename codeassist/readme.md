@@ -105,28 +105,7 @@ uv run run.py --port 3001
 
 <img width="963" height="641" alt="image" src="https://github.com/user-attachments/assets/9fbce663-bbe9-48ef-88ce-566dc41f378c" />
 
-## 5. Forward ports over SSH
-- If you are on window or Mac, open WSL (FOR WINDOWS) and Terminal (for mac) and paste this:
-  ```bash
-  ssh -L 8000:localhost:8000 -L 8008:localhost:8008 -L 3000:localhost:3000 -L 8001:localhost:8001 yourVPSusername@yourVPSIP
-  ```
-  **If you are running it with port 3001 then change 3000 to 3001 before forwarding in your WSL or Terminal**
-  
-  **Replace `yourVPSusername` with the actual one for your VPS**
-  
-  **Replace `yourVPSIP` with your VPS ip address
-  
-- example:
-  
-  <img width="1280" height="441" alt="image" src="https://github.com/user-attachments/assets/202ab744-ec79-4de5-b573-cc3029896a50" />
-
-  **You'll see `Are you sure you want to continue connecting (yes/no/[fingerprint])?` type `yes`**
-  **enter your VPS password when prompt for password**
-  
-  - you should now see something like this:
- ![IMG_7077](https://github.com/user-attachments/assets/08484943-d8eb-43b7-9d57-054e0ff89218)
-
-## 6. Open *http://localhost:3000* or *http://localhost:3001* in your browser. depending on the port used
+## 5. Open *http://localhost:3000* or *http://localhost:3001* in your browser. depending on the port used
 
 ### Alternatively you can use localtunnel
 **Open another tab of your VPS and run:**
