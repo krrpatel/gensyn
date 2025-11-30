@@ -107,11 +107,31 @@ uv run run.py --port 3001
 
 ## 5. Open *http://localhost:3000* or *http://localhost:3001* in your browser. depending on the port used
 
-### Alternatively you can use localtunnel
-**Open another tab of your VPS and run:**
+* Open a new Terminal and login ur vps 
 
-```bash
-sudo npm install -g localtunnel && lt --port 3000
+
+* Install cloudflared on the VPS
+
+```
+wget -q https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-amd64.deb
+````
+
+```
+sudo dpkg -i cloudflared-linux-amd64.deb
+```
+
+* Check version
+
+```
+cloudflared --version
+```
+
+* Make sure your Node is running on port 3000 in Previous Screen
+
+* Run the tunnel command
+
+```
+cloudflared tunnel --url http://localhost:3000
 ```
 **Change 3000 to 3001 if thats the port you run codeassist on.**
 
